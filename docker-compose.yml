@@ -1,0 +1,13 @@
+services:
+  ai-chat:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - CHAT_UPSTREAM=${CHAT_UPSTREAM:-https://api.openai.com/v1/chat/completions}
+      - SERVER_API_KEY=${SERVER_API_KEY:-}
+      - SEARCH_UPSTREAM=${SEARCH_UPSTREAM:-https://api.duckduckgo.com/}
+      - SEARCH_API_KEY=${SEARCH_API_KEY:-}
+      - RATE_LIMIT_MAX=${RATE_LIMIT_MAX:-60}
+    restart: unless-stopped

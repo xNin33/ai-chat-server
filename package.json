@@ -1,0 +1,17 @@
+{
+  "name": "ai-chat-server",
+  "version": "1.0.0",
+  "description": "Backend server for the AI Chat single-page app — static hosting + streaming proxy for chat completion and search endpoints.",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
